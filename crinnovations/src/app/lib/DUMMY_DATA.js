@@ -35,5 +35,16 @@ const CONTACT_INFO = {
     instagram: "https://www.instagram.com/gera_lm_/",
     whatsapp: "https://wa.me/50683137865"
 }
-export default DUMMY_SERVICES;
-
+const SOCIAL_INFO =[
+    {
+        name:"Instagram",  
+        url: "https://www.instagram.com/gera_lm_/",
+    },{
+        name:"Whatsapp",
+        url: "https://wa.me/50683137865"
+    },{
+        name:"Facebook",
+        url: "https://www.facebook.com/estebanlm852002"
+    }
+]
+export {SOCIAL_INFO, DUMMY_SERVICES, CONTACT_INFO}

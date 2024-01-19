@@ -1,5 +1,5 @@
 
-function Infocard({ name, children }) {
+function Infocard({ name, children}) {
   return (
     <article className="py-2 text-gray-950 text-balance">
       <h2>{name}</h2>

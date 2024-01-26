@@ -1,5 +1,4 @@
 import Article from "./Article";
-import "./Section.css";
 function Section({ w, color, children }) {
   return (
     <div className={`flex flex-col ${color} w-${w} divide-y-4 divide-[#213D62]/25`}>

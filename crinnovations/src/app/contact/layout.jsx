@@ -4,7 +4,7 @@ export default function curriculumLayout({ children }) {
   return (
     <>
       <Navbar />
-      <section className="bg-body">{children}</section>
+      <section>{children}</section>
     </>
   );
 }

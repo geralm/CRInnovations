@@ -4,7 +4,12 @@ import { createTheme } from '@mui/material/styles'
 import { ThemeProvider as MaterialProvider } from '@mui/material/styles'
 /*No es tan facil como exportar un ThemeProvider commo componente del cliente
 ya que estos depende del estado del cliente, estos providers son necesarios en la raiz de la aplicación
-por lo que usamos contextProviders*/
+por lo que usamos contextProviders
+
+Aquí no hago lo que dije ¿Por qué?
+recuerda que material ui import ThemeProvider de @mui/material/styles no estamos usando contextProviders 
+directamente de la página de nextjs. por lo que esto funciona bien
+*/
 const roboto = Roboto({
     subsets: ['latin'],
     weight: ['300', '400', '500', '700']

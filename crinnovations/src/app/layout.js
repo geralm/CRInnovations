@@ -6,8 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProvider  from './theme/ThemeProvider';
 const inter = Roboto({ weight: ["100", "300", "400", "500", "700", "900"], subsets: ['latin'] })
 
-
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

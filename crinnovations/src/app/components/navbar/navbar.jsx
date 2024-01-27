@@ -25,7 +25,7 @@ export default function Navbar() {
     setAnchorElNav(null);
   };
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="primary">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* Icon*/}

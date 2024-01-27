@@ -2,7 +2,7 @@
 import { Roboto } from 'next/font/google'
 import { createTheme } from '@mui/material/styles'
 import { ThemeProvider as MaterialProvider } from '@mui/material/styles'
-/*No es tan facil como exportar un ThemeProvider commo componente del cliente
+/*No es tan facil como exportar un ThemeProvider como componente del cliente
 ya que estos depende del estado del cliente, estos providers son necesarios en la raiz de la aplicación
 por lo que usamos contextProviders
 
@@ -17,20 +17,32 @@ const roboto = Roboto({
 
 const theme = createTheme({
     palette:{
-        mode: 'dark',
+        // mode: 'light',
+        primary:{
+            main: '#025696',
+            light: '#F9AB47',
+            // dark: '#1dd3b0',
+            // contrastText: '#affc41',
+        },
+        secondary:{
+            main: '#F9AB47',
+            light: '#025696',
+            dark: '#086375',
+            contrastText: '#1dd3b0',
+        }
     },
-    primary: {
-        main: '#3c1642',
-        light: '#086375',
-        dark: '#1dd3b0',
-        contrastText: '#affc41',
-    },
-    secondary: {
-        main: '#b2ff9e',
-        light: '#affc41',
-        dark: '#086375',
-        contrastText: '#1dd3b0',
-    },
+    // primary: {
+    //     main: '#F9AB47',
+    //     light: '#F9AB47',
+    //     dark: '#1dd3b0',
+    //     contrastText: '#affc41',
+    // },
+    // secondary: {
+    //     main: '#F9AB47',
+    //     light: '#025696',
+    //     dark: '#086375',
+    //     contrastText: '#1dd3b0',
+    // },
 });
 function ThemeProvider({children}) {
 

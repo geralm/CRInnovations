@@ -2,6 +2,7 @@
 import { Roboto } from 'next/font/google'
 import { createTheme } from '@mui/material/styles'
 import { ThemeProvider as MaterialProvider } from '@mui/material/styles'
+import {getPalette}  from './getPalette'
 /*No es tan facil como exportar un ThemeProvider como componente del cliente
 ya que estos depende del estado del cliente, estos providers son necesarios en la raiz de la aplicación
 por lo que usamos contextProviders

@@ -4,6 +4,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { StyledEngineProvider } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline';
 import ThemeProvider  from './theme/ThemeProvider';
+
 const inter = Roboto({ weight: ["100", "300", "400", "500", "700", "900"], subsets: ['latin'] })
 
 export default function RootLayout({ children }) {

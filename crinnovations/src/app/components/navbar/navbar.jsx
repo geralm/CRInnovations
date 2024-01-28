@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "@mui/material/Link";
-
+import ToggleThemeButton from '../theme/ToggleThemeButton'
 import React from "react";
 import { pages } from "./pages.js";
 
@@ -116,6 +116,9 @@ export default function Navbar() {
                 {page.title}
               </Button>
             ))}
+          </Box>
+          <Box >
+            <ToggleThemeButton />
           </Box>
         </Toolbar>
       </Container>

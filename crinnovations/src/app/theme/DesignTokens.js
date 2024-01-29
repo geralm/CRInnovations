@@ -8,20 +8,20 @@
 //     }
     
 // }
-export  const getPalette = (mode) =>({
+export  const getDesignTokens = (mode) =>({
     palette: {
         //
         mode, ...(mode === 'light' ? //if light mode
         {
             primary: {
-                // main: '#3c1642',
+                main: '#3c1642',
                 // contrastText: '#fff'
             },
         }
         : //otherwise, dark mode 
         {
             primary: {
-                // main: '#3c1642',
+                // main: '#3c1643',
                 // contrastText: '#fff'
             },
         })

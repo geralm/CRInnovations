@@ -86,7 +86,7 @@ export default function Navbar() {
             </Menu>
           </Box>
           {/* Icons */}
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -103,7 +103,7 @@ export default function Navbar() {
               textDecoration: "none",
             }}
           >
-            CRInnovations
+            Proyecto
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (

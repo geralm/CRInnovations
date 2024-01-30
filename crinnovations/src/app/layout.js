@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <StyledEngineProvider injectFirst>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+            
             <ToggleThemeProvider>
               {/* ThemeProvider needs to stay inside Caché */}
               <CssBaseline />  {/*(Global rest baseline) Esto elimina los márgenes pues desactivamos la opción por defecto en tailwind css  */}

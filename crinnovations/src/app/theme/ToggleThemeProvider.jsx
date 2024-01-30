@@ -1,19 +1,15 @@
 "use client";
-import { Roboto } from "next/font/google";
 import { ThemeProvider } from "@mui/material/styles";
-import { createTheme } from "@mui/material/styles";
-import { useState, useMemo, createContext} from "react";
-const roboto = Roboto({
-    subsets: ["latin"],
-    weight: ["300", "400", "500", "700"],
-});
+// import { useMediaQuery } from "@mui/material";
+import { useState, useMemo, createContext } from "react";
+import  getTheme  from "./ThemeFactory";
 const ColorModeContext = createContext({
     toggleColorMode: () => {},
 });
 
 function ToggleThemeProvider({ children }) {
     // const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-    const systemPreference = "light";
+    const systemPreference = "light"; //prefersDarkMode ? "dark" : "light";
     const [mode, setMode] = useState(systemPreference); // default theme from the system
     const colorMode = useMemo(
         () => ({
@@ -25,17 +21,7 @@ function ToggleThemeProvider({ children }) {
         }),
         []
     );
-
-    const theme = useMemo(
-        () =>
-            createTheme({
-                palette: {
-                    mode,
-                    // ...getDesignTokens(mode),
-                },
-            }),
-        [mode]
-    );
+    const theme = useMemo(() => getTheme(mode), [mode]);
     //this is to get the configuration of the theme
     //remember useMemo is a hook that returns a value and record it
     return (

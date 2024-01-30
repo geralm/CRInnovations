@@ -23,24 +23,23 @@ function Header({children}) {
                             color: "inherit",
                             textDecoration: "none",
                         }}>
-                            {firstName}
+                            I'm {firstName} {lastName}
+                            
                         </Typography>
-                        <Typography>
-                            {lastName}
-                        </Typography>
+                       
                 </Box>
                 <Box className="">
                     <DownloadButton>Download cv</DownloadButton>
                 </Box>
             </Container>
-            <Container className="flex">
+            <Box className="flex">
                 <Avatar
                     className=""
                     alt={firstName}
                     src={image}
                     sx={{ width: 100, height: 100 }}
                 />
-            </Container>
+            </Box>
         </Container>
     );
 }  

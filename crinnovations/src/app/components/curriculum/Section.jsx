@@ -1,12 +1,31 @@
-import Article from "./Article";
-function Section({ w, color, children }) {
-  return (
-    <div className={`flex flex-col ${color} w-${w} divide-y-4 divide-[#213D62]/25`}>
-      {children.map((i) => (
-        <Article key={i.name} name={i.name}>{i.values}</Article>
-      ))}
-    </div>
-  );
+import { Box } from "@mui/material";
+import Container from "@mui/material/Container";
+import Typography from "@mui/material/Typography";
+
+function Section({ title, children }) {
+    const titleArray = title.split(" ");
+
+    return (
+        <Box>
+            <Container>
+                <Box className="justify-center inline-block">
+                    {titleArray.map((word, index) => (
+                        <Typography
+                            variant="h4"
+                            key={index}
+                            color={index >=1 ? "secondary" : null}
+                            component="span"
+                            sx={{
+                                fontWeight: 700,
+                            }}>
+                            {word} {"  "}
+                        </Typography>
+                    ))}
+                </Box>
+                <Box>{"Hola hola soy una sección de prueba"}</Box>
+            </Container>
+        </Box>
+    );
 }
 
 export default Section;

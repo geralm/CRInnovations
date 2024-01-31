@@ -4,45 +4,51 @@ import { Container } from "@mui/material";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import DownloadButton from "./DownloadButton";
-function Header({children}) {
-    const {firstName, lastName , image} = children;
+function Header({ children }) {
+    const { firstName, lastName, occupation,image } = children;
     return (
-        <Container disableGutters={true} className="grid grid-cols-2">
-            <Container className="flex flex-wrap">
-                <Box className="py-5">
+        <Container disableGutters={true} className="flex flex-row items-center ">
+            <Container className="basis-1/4 self-start py-5">
+                <Box className="">
+                    <Avatar
+                        alt={firstName}
+                        src={image}
+                        sx={{ width: 100, height: 100 }}
+                    />
+                </Box>
+            </Container>
+            <Container className="basis-3/4 grid grid-rows-2 py-4">
+                <Box
+                    className="text-wrap "
+                    sx={{
+                        width: [200, 300],
+                        fontFamily: "Roboto",
+                    }}>
+                    <Typography variant="h5">I'm</Typography>
                     <Typography
-                        variant="h3"
-                        noWrap
+                        color="secondary"
+                        variant="h4"
                         component="a"
-                        sx={{ 
+                        sx={{
                             mr: 2,
-                            display: {  md: "flex" },
-                            fontFamily: "monospace",
+                            display: { md: "flex" },
                             fontWeight: 700,
-                            letterSpacing: ".2rem",
+                            letterSpacing: ".1rem",
                             color: "inherit",
                             textDecoration: "none",
+                            color: "secondary.main",
                         }}>
-                            I'm {firstName} {lastName}
-                            
-                        </Typography>
-                       
+                        {firstName} {lastName}
+                    </Typography>
+                    <Typography variant="h4">{occupation}</Typography>
                 </Box>
-                <Box className="">
+                <Box className="mt-3">
                     <DownloadButton>Download cv</DownloadButton>
                 </Box>
             </Container>
-            <Box className="flex">
-                <Avatar
-                    className=""
-                    alt={firstName}
-                    src={image}
-                    sx={{ width: 100, height: 100 }}
-                />
-            </Box>
         </Container>
     );
-}  
+}
 export default Header;
 
 // shift + alt + s (Abre el menu de arriba)

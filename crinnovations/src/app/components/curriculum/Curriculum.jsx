@@ -3,7 +3,7 @@ import Header from "./Header.jsx";
 import Section from "./Section.jsx";
 export default function Curriculum({ children }) {
   return (
-    <div className="grid grid-col-2">
+    <div>
       <Header >
         {children}
       </Header>

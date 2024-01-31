@@ -3,7 +3,7 @@ export const PERSONAL_INFO = {
   firstName: 'Esteban',
   lastName: 'Leiva',
   fullName: 'Esteban Leiva Montenegro',
-  occupation: 'Full-stack developer',
+  occupation: 'Software Ingenier',
   email: 'estebanlm852002@hotmail.com',
   github: 'https://github.com/geralm',
   image: 'https://images.unsplash.com/photo-1705351953374-76117bc519e1?q=80&w=3861&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',

@@ -8,7 +8,7 @@ function DownloadButton({children,...props}) {
     // res.sendFile('pdfs/someFile.pdf', { root: './' })
 //   };
   return (
-    <Button {...props} variant="outlined" color="secondary" endIcon={<DownloadIcon />} className="w-46 h-11 rounded-full"  >
+    <Button {...props} variant="outlined" color="secondary" endIcon={<DownloadIcon />} className="w-46 h-11 rounded-full mt-5"  >
       {children}
     </Button>
   );

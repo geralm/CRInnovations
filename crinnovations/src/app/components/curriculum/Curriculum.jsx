@@ -8,7 +8,7 @@ export default function Curriculum({ children }) {
     return (
         <div>
             <Header>{children}</Header>
-            <Container className="grid grid-row-2">
+            <Container className="grid grid-row-2 mt-10">
                 <Box className="flex justify-center mb-5">
                     <SectionTitle>{"ABOUT ME"}</SectionTitle>
                 </Box>

@@ -6,13 +6,13 @@ import Typography from "@mui/material/Typography";
 import DownloadButton from "./DownloadButton";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
+import { useTheme } from "@mui/material/styles";
 function Header({ children }) {
     const { firstName, lastName, occupation, image } = children;
+    const theme = useTheme();
     return (
-        <Container
-            disableGutters={true}
-            className="flex flex-row items-center ">
-            <Container className="basis-1/4  self-start py-5 md:basis-1/2">
+        <Container disableGutters={true} className="flex flex-row mt-5">
+            <Container className=" basis-1/4 md:basis-1/2 flex justify-center ">
                 <Avatar
                     alt={firstName}
                     src={image}
@@ -22,18 +22,18 @@ function Header({ children }) {
                         display: { xs: "flex", md: "none" },
                     }}
                 />
-                <CardMedia
-                    component="img"
-                    image={image}
-                    alt={"Profile picture"}
-                    sx={{
-                        width: 200,
-                        height: 200,
-                        display: { xs: "none", md: "flex" },
-                    }}
-                />
+                <Card className={`flex basis-3/5`}>
+                    <CardMedia
+                        component="img"
+                        image={image}
+                        alt={"Profile picture"}
+                        sx={{
+                            display: { xs: "none", md: "flex" },
+                        }}
+                    />
+                </Card>
             </Container>
-            <Container className="basis-3/4 md:basis-1/2 grid grid-rows-2 py-4">
+            <Container className="basis-3/4 md:basis-1/2 flex justify-center md:justify-start">
                 <Box
                     className="text-wrap "
                     sx={{
@@ -56,10 +56,11 @@ function Header({ children }) {
                         {firstName} {lastName}
                     </Typography>
                     <Typography variant="h4">{occupation}</Typography>
-                </Box>
-                <Box className="mt-3">
+
                     <DownloadButton>Download cv</DownloadButton>
                 </Box>
+                {/* <Box className="mt-3 ">
+                </Box> */}
             </Container>
         </Container>
     );

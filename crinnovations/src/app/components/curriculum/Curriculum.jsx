@@ -1,16 +1,20 @@
 "use client";
-import Header from "./Header.jsx";
-import Section from "./Section.jsx";
+import Header from "./Header/Header.jsx";
+import Container from "@mui/material/Container";
+import AboutMe from "./Sections/AboutMe.jsx";
+import Box from "@mui/material/Box";
+import SectionTitle from "./SectionTitle.jsx";
 export default function Curriculum({ children }) {
-  return (
-    <div>
-      <Header >
-        {children}
-      </Header>
-      
-      <Section title={"About Me"}>{children}</Section>
-      {/* <Section w="1/2" color="bg-left" >{children.leftsection}</Section> */}
-      {/* <Section w="auto" color="bg-right">{children.rightsection}</Section> */}
-    </div>
-  );
+    return (
+        <div>
+            <Header>{children}</Header>
+            <Container className="grid grid-row-2">
+                <Box className="flex justify-center mb-5">
+                    <SectionTitle>{"ABOUT ME"}</SectionTitle>
+                </Box>
+                <AboutMe>{children}</AboutMe>
+            </Container>
+     
+        </div>
+    );
 }

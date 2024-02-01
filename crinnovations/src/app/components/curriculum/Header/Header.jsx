@@ -4,30 +4,44 @@ import { Container } from "@mui/material";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import DownloadButton from "./DownloadButton";
+import Card from "@mui/material/Card";
+import CardMedia from "@mui/material/CardMedia";
 function Header({ children }) {
-    const { firstName, lastName, occupation,image } = children;
+    const { firstName, lastName, occupation, image } = children;
     return (
-        <Container disableGutters={true} className="flex flex-row items-center ">
-            <Container className="basis-1/4 self-start py-5">
-                <Box className="">
-                    <Avatar
-                        alt={firstName}
-                        src={image}
-                        sx={{ width: 100, height: 100 }}
-                    />
-                </Box>
+        <Container
+            disableGutters={true}
+            className="flex flex-row items-center ">
+            <Container className="basis-1/4  self-start py-5 md:basis-1/2">
+                <Avatar
+                    alt={firstName}
+                    src={image}
+                    sx={{
+                        width: 100,
+                        height: 100,
+                        display: { xs: "flex", md: "none" },
+                    }}
+                />
+                <CardMedia
+                    component="img"
+                    image={image}
+                    alt={"Profile picture"}
+                    sx={{
+                        width: 200,
+                        height: 200,
+                        display: { xs: "none", md: "flex" },
+                    }}
+                />
             </Container>
-            <Container className="basis-3/4 grid grid-rows-2 py-4">
+            <Container className="basis-3/4 md:basis-1/2 grid grid-rows-2 py-4">
                 <Box
                     className="text-wrap "
                     sx={{
-                        width: [200, 300],
                         fontFamily: "Roboto",
                     }}>
-                    <Typography variant="h5">I'm</Typography>
                     <Typography
                         color="secondary"
-                        variant="h4"
+                        variant="h3"
                         component="a"
                         sx={{
                             mr: 2,
@@ -37,7 +51,8 @@ function Header({ children }) {
                             color: "inherit",
                             textDecoration: "none",
                             color: "secondary.main",
-                        }}>
+                        }}
+                        className="mt-5 uppercase">
                         {firstName} {lastName}
                     </Typography>
                     <Typography variant="h4">{occupation}</Typography>

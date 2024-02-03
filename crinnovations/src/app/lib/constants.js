@@ -22,14 +22,30 @@ export const PERSONAL_INFO = {
       src: "./ieeeExtreme.jpg",
     }
   ],
-  skills: [
-    'Liderazgo',
-    'Resolución de problemas',
-    'Capacidad de aprendizaje',
-    'Trabajo en equipo',
-    'Comunicación efectiva',
-    'Adaptabilidad'
-  ],
+  skills: {
+    soft: [
+      {skill: 'Liderazgo', isStrong: true},
+      {skill: 'Comunicación efectiva', isStrong: true},
+      {skill: 'Adaptabilidad', isStrong: true},
+      {skill: 'Capacidad de aprendizaje', isStrong: false},
+      {skill: 'Trabajo en equipo', isStrong: false},
+      {skill: 'Resolución de problemas', isStrong: false},
+    ],
+    hard:[
+      {skill: 'Python', isStrong: true},
+      {skill: 'JavaScript', isStrong: true},
+      {skill: 'React', isStrong: true},
+      {skill: 'Express', isStrong: true},
+      {skill: 'Java', isStrong: true},
+      {skill: 'Node.js', isStrong: false},
+      {skill: 'C', isStrong: false},
+      {skill: 'SQL', isStrong: false},
+      {skill: 'NextJS', isStrong: false},
+      {skill: 'Artificial Intelligence', isStrong: false},
+      {skill: 'Quality Assurance', isStrong: false},
+    ]
+    
+  },
 
   languages: ['Español', 'Inglés'],
 

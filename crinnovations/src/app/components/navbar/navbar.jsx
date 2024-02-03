@@ -77,8 +77,8 @@ export default function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                  <Link href={page.href} underline="none" color="inherit">
+                <MenuItem key={page.title} onClick={handleCloseNavMenu} sx={{mx:30}}>
+                  <Link href={page.href} underline="none" color="inherit" >
                     <Typography textAlign="center">{page.title}</Typography>
                   </Link>
                 </MenuItem>

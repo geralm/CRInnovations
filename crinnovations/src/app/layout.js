@@ -3,8 +3,8 @@ import './globals.css'
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { StyledEngineProvider } from '@mui/material'
 import CssBaseline from '@mui/material/CssBaseline';
-import ToggleThemeProvider  from './theme/ToggleThemeProvider';
-
+import ToggleThemeProvider from './theme/ToggleThemeProvider';
+import Footer from './components/Footer/Footer';
 const inter = Roboto({ weight: ["100", "300", "400", "500", "700", "900"], subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
@@ -13,12 +13,18 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <StyledEngineProvider injectFirst>
           <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-            
+
             <ToggleThemeProvider>
               {/* ThemeProvider needs to stay inside Caché */}
               <CssBaseline />  {/*(Global rest baseline) Esto elimina los márgenes pues desactivamos la opción por defecto en tailwind css  */}
               {/* To insert mui styles before tailwind this important to use both */}
               {children}
+              <Footer>{{
+                instagram: 'https://www.instagram.com/gera_lm_/',
+                whatsapp: 'https://wa.me/50683137865',
+                github: 'https://github.com/geralm'
+              }}</Footer>
+
             </ToggleThemeProvider>
             {/*Theme provider tiene un problema: createContext only works in Client Components. 
             Add the "use client" directive at the top of the file to use it.

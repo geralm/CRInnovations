@@ -22,8 +22,8 @@ function ToggleThemeProvider({ children }) {
         []
     );
     const theme = useMemo(() => getTheme(mode), [mode]);
-    //this is to get the configuration of the theme
-    //remember useMemo is a hook that returns a value and record it
+    // this is to get the configuration of the theme
+    // remember useMemo is a hook that returns a value and record it
     return (
         <ColorModeContext.Provider value={colorMode}>
             <ThemeProvider theme={theme}>{children}</ThemeProvider>

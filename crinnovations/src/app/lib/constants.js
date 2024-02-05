@@ -5,17 +5,17 @@ export const PERSONAL_INFO = {
   fullName: 'Esteban Leiva Montenegro',
   occupation: 'Software Ingenier',
   email: 'estebanlm852002@hotmail.com',
-  github: 'https://github.com/geralm',
   image: './profile.jpg',
-  age: '22 years',    
+  age: '22 years',
   contact: {
     phoneNumber: '+506 8313-7865',
     email: 'estebanlm852002@hotmail.com',
     ieee: 'estebanlm@ieee.org',
     instagram: 'https://www.instagram.com/gera_lm_/',
     whatsapp: 'https://wa.me/50683137865',
+    github: 'https://github.com/geralm',
   },
-  images:[
+  images: [
     {
       title: "IEEE Xtreme 14.0",
       description: "Participación en el concurso de programación de 24 horas a nivel internacional organizado por IEEE.",
@@ -24,34 +24,41 @@ export const PERSONAL_INFO = {
   ],
   skills: {
     soft: [
-      {skill: 'Liderazgo', isStrong: true},
-      {skill: 'Comunicación efectiva', isStrong: true},
-      {skill: 'Adaptabilidad', isStrong: true},
-      {skill: 'Capacidad de aprendizaje', isStrong: false},
-      {skill: 'Trabajo en equipo', isStrong: false},
-      {skill: 'Resolución de problemas', isStrong: false},
+      { skill: 'Liderazgo', isStrong: true },
+      { skill: 'Comunicación efectiva', isStrong: true },
+      { skill: 'Adaptabilidad', isStrong: true },
+      { skill: 'Capacidad de aprendizaje', isStrong: false },
+      { skill: 'Trabajo en equipo', isStrong: false },
+      { skill: 'Resolución de problemas', isStrong: false },
     ],
-    hard:[
-      {skill: 'Python', isStrong: true},
-      {skill: 'JavaScript', isStrong: true},
-      {skill: 'React', isStrong: true},
-      {skill: 'Express', isStrong: true},
-      {skill: 'Java', isStrong: true},
-      {skill: 'Node.js', isStrong: false},
-      {skill: 'C', isStrong: false},
-      {skill: 'SQL', isStrong: false},
-      {skill: 'NextJS', isStrong: false},
-      {skill: 'Artificial Intelligence', isStrong: false},
-      {skill: 'Quality Assurance', isStrong: false},
+    hard: [
+      { skill: 'Python', isStrong: true },
+      { skill: 'JavaScript', isStrong: true },
+      { skill: 'React', isStrong: true },
+      { skill: 'Express', isStrong: true },
+      { skill: 'Java', isStrong: true },
+      { skill: 'Node.js', isStrong: false },
+      { skill: 'C', isStrong: false },
+      { skill: 'SQL', isStrong: false },
+      { skill: 'NextJS', isStrong: false },
+      { skill: 'Artificial Intelligence', isStrong: false },
+      { skill: 'Quality Assurance', isStrong: false },
     ]
-    
+
   },
 
   languages: ['Español', 'Inglés'],
 
-  
+
   description: 'Soy un estudiante de Ingeniería en Ciencias Computación en el Instituto Tecnológico de Costa Rica, con experiencia en desarrollo de software y aplicaciones web. Me gusta aprender cosas nuevas y resolver problemas.',
-  
+  reviews: [
+    {
+      name: 'Laura Coto Sarmiento',
+      position: 'Profesora de la Escuela de Computación del Instituto Tecnológico de Costa Rica',
+      description: 'Esteban es un estudiante muy dedicado y apasionado por la programación. Siempre se destaca por su liderazgo y su capacidad para resolver problemas. Ha sido asistente académico en el curso de Introducción a la programación y taller de la programación, impartido por mí, y ha sido un gran apoyo para los estudiantes.',
+    },
+
+  ],
 
   experience: [
     {

@@ -12,7 +12,7 @@ import { ColorModeContext } from "@/app/theme/ToggleThemeProvider";
 function ToggleThemeButton() {
     
     const theme = useTheme();
-    const colorMode = useContext(ColorModeContext); //This context is from ToogleThemeProvider
+    const colorMode = useContext(ColorModeContext); //This context is from ToogleThemeProvider and it is used to toggle the theme
     // const colorMode = useContext(ColorModeContext);
 
     return (

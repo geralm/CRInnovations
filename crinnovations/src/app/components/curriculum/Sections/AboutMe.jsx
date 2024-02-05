@@ -4,8 +4,7 @@ import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import Avatar from "@mui/material/Avatar";
+
 import SectionTitle from "../SectionTitle";
 function Item({ tag, children }) {
     return (
@@ -21,7 +20,7 @@ function Item({ tag, children }) {
 function Article({ name, children }) {
     return (
         <Box className="sm:basis-1/2 flex flex-col md:justify-center mb-5">
-            <Typography variant="inherit">
+            <Typography  variant="h5">
                 <strong>{name}</strong>
             </Typography>
             {children}
@@ -83,12 +82,12 @@ export default function AboutMe({ children }) {
                         <Box className="list-none text-justify">
                             {experience.map((job, index) => (
                                 <li key={index} className="mt-4">
-                                    <Typography variant="h5">
+                                    <Typography variant="h6">
                                         {job.title}
                                     </Typography>
-                                    <Typography variant="h6" color="text.secondary">{job.company}</Typography>
+                                    <Typography variant="subtitle1" color="text.secondary">{job.company}</Typography>
                                     <Typography color="text.secondary">{job.date}</Typography>
-                                    <Typography variant="body1">
+                                    <Typography variant="body2">
                                         {job.description}
                                     </Typography>
                                 </li>
@@ -98,107 +97,7 @@ export default function AboutMe({ children }) {
             </Box>
         </>
 
-        // <Box className="flex flex-col">
-        //     <Container className="flex flex-row">
-        //         <Box className="mr-10">
-        //             {" "}
-        //             <Avatar
-        //                 alt={firstName}
-        //                 src={image}
-        //                 sx={{
-        //                     width: 100,
-        //                     height: 100,
-        //                     display: { xs: "flex", md: "none" },
-        //                 }}
-        //             />
-        //             <Card
-        //                 className={`flex w-90 h-90`}
-        //                 sx={{ display: { xs: "none", md: "flex" } }}>
-        //                 <CardMedia
-        //                     component="img"
-        //                     image={image}
-        //                     alt={"Profile picture"}
-        //                     sx={{
-        //                         display: { xs: "none", md: "flex" },
-        //                     }}
-        //                 />
-        //             </Card>
-        //         </Box>
-        //         <Container className="ml-10">
-        //             <Article name={"Personal Info"}>
-        //                 <Box className="flex flex-col">
-        //                     <Item tag="First Name">{firstName}</Item>
-        //                     <Item tag="Last Name">{lastName}</Item>
-        //                     <Item tag="Age">{age}</Item>
-        //                     <Item tag="Phone">{contact.phoneNumber}</Item>
-        //                     <Item tag="Email">{email}</Item>
-        //                     <Item tag="Languages">{languages.join(", ")}</Item>
-        //                 </Box>
-        //             </Article>
-        //             <Article name={"Description"}>
-        //                 <Box className="flex text-balance">
-        //                     <Typography>{description}</Typography>
-        //                 </Box>
-        //             </Article>
-        //         </Container>
-        //     </Container>
-        //     <Container>
-
-        //     </Container>
-        // </Box>
+        
     );
-    {
-        /* 
-        <Container className="flex flex-wrap-reverse  justify-evenly sm:flex-row">
-            <Box className=" md:basis-1/3 ">
-                <Card >
-                    <CardMedia
-                        component="img"
-                        height="275"
-                        image={images[0].src}
-                        alt={images[0].title}
-                    />
-                    <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
-                            {images[0].title}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                            {images[0].description}
-                        </Typography>
-                    </CardContent>
-                </Card>
-            </Box>
-            <Box className="basis-2/4">
-                <Article name={"Personal Info"}>
-                    <Box className="flex flex-col sm:flex-row ">
-                        <Box className="flex flex-col ">
-                            <Item tag="First Name">{firstName}</Item>
-                            <Item tag="Last Name">{lastName}</Item>
-                            <Item tag="Age">{age}</Item>
-                            <Item tag="Phone">{contact.phoneNumber}</Item>
-                        </Box>
-                        <Box className="flex flex-col sm:ml-10">
-                            <Item tag="Email">{email}</Item>
-                            <Item tag="Languages">{languages.join(", ")}</Item>
-                            <Item tag="Instagram">
-                                <Link href={contact.instagram} underline="none">
-                                    {"gera_lm_"}
-                                </Link>
-                            </Item>
-                            <Item tag="Github">
-                                <Link href={github} underline="none">
-                                    {"geralm"}
-                                </Link>
-                            </Item>
-                        </Box>
-                    </Box>
-                </Article>
-                <Article name={"Description"} >
-                    <Box className="flex text-balance">
-                        <Typography>{description}</Typography>
-                    </Box>
-                </Article>
-            </Box>
-        </Container> */
-    }
+    
 }

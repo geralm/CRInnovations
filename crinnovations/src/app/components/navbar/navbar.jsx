@@ -11,117 +11,133 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Link from "@mui/material/Link";
-import ToggleThemeButton from '../theme/ToggleThemeButton'
+import ToggleThemeButton from "../theme/ToggleThemeButton";
 import React from "react";
 import { pages } from "./pages.js";
 
-export default function Navbar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
+export default function Navbar({ disableThemeButton = false }) {
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-  return (
-    <AppBar position="static" color="primary">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          {/* Icon*/}
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            CRInnovations
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page.title} onClick={handleCloseNavMenu} sx={{mx:30}}>
-                  <Link href={page.href} underline="none" color="inherit" >
-                    <Typography textAlign="center">{page.title}</Typography>
-                  </Link>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
-          {/* Icons */}
-          {/* <AdbIcon sx={{ display: { xs: "none", md: "none" }, mr: 1 }} /> */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            CRInnovations
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                key={page.title}
-                href={page.href}
-                sx={{ my: 2, color: "white", display: "block" }}
-                // underline="hover"
-              >
-                {page.title}
-              </Button>
-            ))}
-          </Box>
-          <Box >
-            <ToggleThemeButton />
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+    return (
+        <AppBar position="static" color="primary">
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    {/* Icon*/}
+                    <AdbIcon
+                        sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
+                    />
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: "none", md: "flex" },
+                            fontFamily: "monospace",
+                            fontWeight: 700,
+                            letterSpacing: ".3rem",
+                            color: "inherit",
+                            textDecoration: "none",
+                        }}>
+                        CRInnovations
+                    </Typography>
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: "flex", md: "none" },
+                        }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit">
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: "bottom",
+                                horizontal: "left",
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: "top",
+                                horizontal: "left",
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{
+                                display: { xs: "block", md: "none" },
+                            }}>
+                            {pages.map((page) => (
+                                <MenuItem
+                                    key={page.title}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ mx: 30 }}>
+                                    <Link
+                                        href={page.href}
+                                        underline="none"
+                                        color="inherit">
+                                        <Typography textAlign="center">
+                                            {page.title}
+                                        </Typography>
+                                    </Link>
+                                </MenuItem>
+                            ))}
+                        </Menu>
+                    </Box>
+                    {/* Icons */}
+                    {/* <AdbIcon sx={{ display: { xs: "none", md: "none" }, mr: 1 }} /> */}
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: "flex", md: "none" },
+                            flexGrow: 1,
+                            fontFamily: "monospace",
+                            fontWeight: 700,
+                            letterSpacing: ".3rem",
+                            color: "inherit",
+                            textDecoration: "none",
+                        }}>
+                        CRInnovations
+                    </Typography>
+                    <Box
+                        sx={{
+                            flexGrow: 1,
+                            display: { xs: "none", md: "flex" },
+                        }}>
+                        {pages.map((page) => (
+                            <Button
+                                key={page.title}
+                                href={page.href}
+                                sx={{ my: 2, color: "white", display: "block" }}
+                                // underline="hover"
+                            >
+                                {page.title}
+                            </Button>
+                        ))}
+                    </Box>
+                    {!disableThemeButton && (
+                        <Box>
+                            <ToggleThemeButton />
+                        </Box>
+                    )}
+                </Toolbar>
+            </Container>
+        </AppBar>
+    );
 }

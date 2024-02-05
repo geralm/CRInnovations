@@ -4,8 +4,6 @@ import { Container } from "@mui/material";
 import { Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import DownloadButton from "./DownloadButton";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
 const background_image = "./background/curriculum-header.jpg";
 
 function Header({ children }) {
@@ -31,10 +29,10 @@ function Header({ children }) {
                         className="uppercase">
                         {firstName} {lastName}
                     </Typography>
-                    <Typography variant="h2">{occupation}</Typography>
-                    <Box className="grid grid-cols-2">
+                    <Typography variant="h3">{occupation}</Typography>
+                    {/* <Box className="grid grid-cols-2">
                         <DownloadButton>Download cv</DownloadButton>
-                    </Box>
+                    </Box> */}
                 </Box>
             </Container>
         // <Container disableGutters={true} className="flex flex-row mt-5">

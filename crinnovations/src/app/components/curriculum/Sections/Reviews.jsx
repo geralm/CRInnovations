@@ -7,9 +7,10 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import SwipeableViews from "react-swipeable-views-react-18-fix";
+
 function Reviews({ children = [] }) {
     const theme = useTheme();
+    const [data, setData] = React.useState(children);
     const [activeStep, setActiveStep] = React.useState(0);
     const maxSteps = children.length;
 
@@ -42,23 +43,16 @@ function Reviews({ children = [] }) {
                     {children[activeStep].position}
                 </Typography>
             </Paper>
-            <SwipeableViews
-                axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-                index={activeStep}
-                onChangeIndex={handleStepChange}
-                enableMouseEvents>
-                {children.map((review, index) => (
-                    <div key={review.name}>
-                        {Math.abs(activeStep - index) <= 2 ? (
-                            <Box className="flex justify-center text-justify">
-                                <Typography variant="body1">
-                                    {review.description}
-                                </Typography>
-                            </Box>
-                        ) : null}
-                    </div>
-                ))}
-            </SwipeableViews>
+            <Box
+                sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    height: 200,
+                    width: "100%",
+                }}>
+                <Typography variant="body1">{children[activeStep].description}</Typography>
+            </Box>
             <MobileStepper
                 steps={maxSteps}
                 position="static"

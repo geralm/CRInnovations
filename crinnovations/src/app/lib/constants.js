@@ -54,10 +54,9 @@ export const PERSONAL_INFO = {
   reviews: [
     {
       name: 'Laura Coto Sarmiento',
-      position: 'Profesora de la Escuela de Computación del Instituto Tecnológico de Costa Rica',
+      position: 'IProfesora de la Escuela de Computación del Instituto Tecnológico de Costa Rica',
       description: 'Esteban es un estudiante muy dedicado y apasionado por la programación. Siempre se destaca por su liderazgo y su capacidad para resolver problemas. Ha sido asistente académico en el curso de Introducción a la programación y taller de la programación, impartido por mí, y ha sido un gran apoyo para los estudiantes.',
-    },
-
+    }
   ],
 
   experience: [
